@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #2d2d2d;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.container header {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: #fff;
+    font-weight: 500;
+}
+
+.form :where(.input-box input, .select-box, textarea){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 8px;
+    border: 1px solid #3d3d3d;
+    border-radius: 8px;
+    padding: 0 15px;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.form :where(.input-box input.focused, .select-box.focused, textarea.focused){
+    border-color: #4CAF50 !important;
+    background: #1a1a1a !important;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+textarea {
+    height: 100px !important;
+    resize: none;
+    padding-top: 15px;
+}
+
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .gender-box{
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #1a1a1a;
+}
+
+.gender-box h3{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.form :where(.gender-option){
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form .gender{
+    column-gap: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form .gender:hover {
+    background: #3d3d3d;
+}
+
+.gender input{
+    accent-color: #4CAF50;
+}
+
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+}
+
+.gender label{
+    color: #fff;
+    font-weight: 500;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 8px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #1a1a1a;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.checkbox-item:hover {
+    background: #3d3d3d;
+}
+
+.checkbox-item input[type="checkbox"] {
+    accent-color: #4CAF50;
+}
+
+.checkbox-item label {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.select-box {
+    position: relative;
+    width: 100%;
+}
+
+.select-box select {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    background: #1a1a1a;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select-box select option {
+    padding: 10px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    background: #4CAF50;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form button:hover{
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.summary-panel {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #1a1a1a;
+}
+
+.summary-panel h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+#summaryContent {
+    color: #fff;
+    line-height: 1.8;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter:invert(1);           /* iconun rngini beyaz yapmak için kulanılan css düzenlemesi :D */
+}
+
+@media screen and (max-width: 500px) {
+    .form .column{
+        flex-wrap: wrap;
+    }   
+    .form :where(.gender-option, .gender){
+        row-gap: 15px;
+    }
+}

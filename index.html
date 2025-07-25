@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üye Kayıt Formu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <header>Üye Kayıt Formu</header>
+
+        <form action="#" class="form" id="registerForm">
+            <div class="input-box">
+                <label>Ad Soyad</label>
+                <input type="text" id="fullName" oninput="myfunction()" placeholder="Adınızı ve soyadınızı giriniz" required/>
+            </div>
+            
+            <div class="input-box">
+                <label>E-posta Adresi</label>
+                <input type="text" id="email" placeholder="E-posta adresinizi giriniz"/>
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Telefon Numarası</label>
+                    <input type="number" id="phone" placeholder="Telefon numaranızı giriniz" required/>
+                </div>
+
+                <div class="input-box">
+                    <label>Doğum Tarihi</label>
+                    <input type="date" id="birthDate" required/>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Doğum Yeri</label>
+                <div class="select-box">
+                    <select id="birthPlace">
+                        <option value="">Şehir seçiniz</option>
+                        <option value="istanbul">İstanbul</option>
+                        <option value="ankara">Ankara</option>
+                        <option value="izmir">İzmir</option>
+                        <option value="bursa">Bursa</option>
+                        <option value="antalya">Antalya</option>
+                        <option value="rize">Rize</option>
+                        <option value="Trabzon">Trabzon</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="gender-box">
+                <h3>Cinsiyet</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="male" name="gender" value="Erkek" />
+                        <label for="male">Erkek</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="female" name="gender" value="Kadın" />
+                        <label for="female">Kadın</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Hobiler</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby1" value="Spor">
+                        <label for="hobby1">Spor</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby2" value="Müzik">
+                        <label for="hobby2">Müzik</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby3" value="Kitap">
+                        <label for="hobby3">Kitap</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby4" value="Yemek">
+                        <label for="hobby4">Yemek</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby5" value="Oyun">
+                        <label for="hobby5">Oyun</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Almak İstediğiniz Dersler</label>
+                <div class="select-box">
+                    <select id="courses" multiple>
+                        <option value="matematik">İleri Web Tasarımı </option>
+                        <option value="fizik">İçerik Yönetimi</option>
+                        <option value="kimya">Sistem Analizi</option>
+                        <option value="biyoloji">Bilgisayarlı Konrol</option>
+                        <option value="tarih">İleri Nesne Tabnanlı Programlama</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>Adres</label>
+                <textarea id="address" placeholder=" Adresinizi giriniz " required></textarea>
+            </div>
+
+            <div class="input-box">
+                <label>Yaş</label>
+                <input type="number" id="age" min="18" max="100" placeholder="Yaşınızı giriniz" required/>
+            </div>
+
+            <button type="submit">Kayıt Ol</button>
+        </form>
+
+        <div class="summary-panel" id="summaryPanel">
+            <h3>Kayıt Özeti</h3>
+            <div id="summaryContent"></div>
+        </div>
+
+    </section>
+    
+    <script src="javascript.js"></script>
+</body>
+</html>
+
+
+
+
